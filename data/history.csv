@@ -1,0 +1,9 @@
+id,timestamp,user_story,predicted_points,confidence,model
+6c87009b-4a4d-48b4-84ee-1686a7fc3afc,2026-02-04T09:59:16.148247,i want to change password,5,medium,RandomForestRegressor
+81adf6fd-813d-4b88-93f7-2d53618c1a5c,2026-02-04T09:59:26.098220,i want to change name,5,medium,RandomForestRegressor
+1166d345-0063-4da0-93f4-17ba64f9054e,2026-02-04T09:59:26.842855,i want to change name,5,medium,RandomForestRegressor
+6b665854-4a9f-4a02-8702-773acd458e02,2026-02-04T09:59:34.715778,i want to change my project,5,medium,RandomForestRegressor
+8145ba98-4cb0-46b3-8b20-d6dd4804a358,2026-02-04T09:59:35.311837,i want to change my project,5,medium,RandomForestRegressor
+50363027-360e-4420-845f-4329fc6e7411,2026-02-04T09:59:35.690300,i want to change my project,5,medium,RandomForestRegressor
+b914ff08-9b91-45d3-b85f-5d28316327c5,2026-02-04T09:59:53.977216,"i want to change my password , name, project",5,high,RandomForestRegressor
+8bc5271c-ed98-4234-bacb-4d4fe2935720,2026-02-04T09:59:54.531027,"i want to change my password , name, project",5,high,RandomForestRegressor
