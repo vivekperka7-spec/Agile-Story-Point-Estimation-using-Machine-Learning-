@@ -65,14 +65,14 @@ app.include_router(feedback.router)
 # Page Routes
 @app.get("/")
 async def home(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request, "page": "home", "now": datetime.now()})
+    return templates.TemplateResponse(name="home.html", context={"page": "home", "now": datetime.now()}, request=request)
 
 @app.get("/product")
 async def product(request: Request):
-    return templates.TemplateResponse("product.html", {"request": request, "page": "product", "now": datetime.now()})
+    return templates.TemplateResponse(name="product.html", context={"page": "product", "now": datetime.now()}, request=request)
 
 @app.get("/how-it-works")
 async def how_it_works(request: Request):
-    return templates.TemplateResponse("how_it_works.html", {"request": request, "page": "how-it-works", "now": datetime.now()})
+    return templates.TemplateResponse(name="how_it_works.html", context={"page": "how-it-works", "now": datetime.now()}, request=request)
 
 
