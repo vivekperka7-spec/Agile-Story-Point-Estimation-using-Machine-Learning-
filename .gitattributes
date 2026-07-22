@@ -1,9 +1,5 @@
-# Override GitHub Linguist language detection
-# Mark frontend files so Python dominates the language bar
-
-# HTML templates are not the core project code
-*.html linguist-documentation
-
-# Static assets are supporting files
+# Mark vendor/framework CSS as vendored (common practice)
 app/static/css/*.css linguist-vendored
-app/static/js/*.js linguist-vendored
+
+# Base layout template is boilerplate
+app/templates/layout.html linguist-documentation
