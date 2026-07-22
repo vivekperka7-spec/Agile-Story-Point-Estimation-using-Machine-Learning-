@@ -86,10 +86,10 @@ Navigate to the localized server URL, select the **Estimator** tab, and input a 
 
 ## Credits and Copyright
 
-**Lead Developer**: P.Vivek
+**Lead Developer**: Vivek Perka
 
 > "SprintIQ demonstrates the power of Machine Learning in modern software engineering, aiming to resolve real-world Agile challenges like estimation bias through data-driven insights."
 
-**Copyright © 2026 P.Vivek. All Rights Reserved.**
+**Copyright © 2026 Vivek Perka. All Rights Reserved.**
 
 This project, including its source code and proprietary estimation algorithms, is the intellectual property of P.Vivek. Unauthorized reproduction, distribution, or commercial use of the core logic without explicit permission is strictly prohibited.
