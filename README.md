@@ -1,82 +1,139 @@
-# SprintIQ: Intelligent Agile Estimation System
+<div align="center">
 
-## Introduction
+# ⚡ SprintIQ
 
-SprintIQ is an advanced, machine learning-based estimation system designed to optimize Agile sprint planning processes. By leveraging Natural Language Processing (NLP) and historical project data, SprintIQ analyzes the semantic complexity of user stories to provide objective, data-driven story point estimates. This system eliminates the subjective bias inherent in traditional estimation methods and reduces the time engineering teams spend on sprint planning.
+### Intelligent Agile Story Point Estimation System
 
-## Project Overview
+**AI-powered story point prediction using NLP and Machine Learning**
 
-Accurate estimation is critical for predictable delivery and effective resource allocation in modern software engineering. SprintIQ addresses the challenges of human estimation bias and inconsistency by introducing an objective, automated baseline.
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-SprintIQ-6366F1?style=for-the-badge)](https://sprintiq-intq.onrender.com)
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![scikit-learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
 
-The platform bridges the gap between human intuition and statistical reality. By training on a comprehensive dataset of completed user stories and their actual implementation complexities, SprintIQ learns to recognize patterns in requirements that correlate with higher or lower effort levels. This results in consistent, reproducible estimates grounded in empirical data.
+</div>
 
-## Key Features
+---
 
-*   **Artificial Intelligence-Powered Accuracy**: Utilizes a Regression model trained on historical agile data to understand technical requirement nuances.
-*   **Mitigation of Planning Bias**: Provides a neutral, algorithmic second opinion to help teams converge on realistic estimates.
-*   **Efficiency in Sprint Planning**: Delivers immediate estimates, allowing teams to focus on implementation details rather than numerical negotiation.
-*   **Confidence Metrics**: Calculates a confidence score for each prediction to identify stories requiring deeper human review.
-*   **Standard Agile Compliance**: Supports the standard Fibonacci sequence (1, 2, 3, 5, 8, 13) for story points.
+## 📌 About The Project
 
-## System Architecture
+SprintIQ is an advanced machine learning-based estimation system that optimizes Agile sprint planning. By leveraging **Natural Language Processing (NLP)** and historical project data, it analyzes the semantic complexity of user stories to deliver **objective, data-driven story point estimates** — eliminating subjective bias and reducing sprint planning time.
 
-SprintIQ operates through a four-stage pipeline:
+<div align="center">
 
-1.  **Data Input**: Accepts unstructured user stories via a web interface or RESTful API.
-2.  **Preprocessing**: Performs tokenization, stop-word removal, and vectorization.
-3.  **Model Inference**: Uses a Random Forest Regressor to calculate a raw continuous complexity score.
-4.  **Prediction**: Maps the score to the Fibonacci scale and generates a confidence metric.
+![Hero](docs/images/hero_main.png)
 
-## Technology Stack
+</div>
 
-*   **Backend**: FastAPI (Python)
-*   **Machine Learning**: Scikit-Learn
-*   **Data Processing**: Pandas & NumPy
-*   **Frontend**: Jinja2 Templates & Vanilla CSS
-*   **Server**: Uvicorn
+## 🎯 Problem Statement
 
-## Installation
+Accurate estimation is critical for predictable delivery in modern software engineering. Traditional Planning Poker and team-based estimation suffer from:
+- **Anchoring bias** — estimates influenced by the first number suggested
+- **Inconsistency** — same story, different estimates across teams
+- **Time waste** — hours spent debating story points in meetings
+
+**SprintIQ solves this** by providing a neutral, ML-powered baseline that teams can use as a starting point.
+
+## ✨ Key Features
+
+| Feature | Description |
+|---|---|
+| 🧠 **AI-Powered Estimation** | Random Forest Regressor trained on historical agile data with TF-IDF vectorization |
+| ⚖️ **Bias Reduction** | Algorithmic second opinion eliminates anchoring and groupthink effects |
+| ⚡ **Instant Predictions** | Real-time estimates via web UI or REST API |
+| 📊 **Confidence Scoring** | Each prediction includes a confidence metric (High/Medium/Low) |
+| 🔄 **Feedback Loop** | Users can correct estimates to continuously improve the model |
+| 🎯 **Fibonacci Scale** | Maps predictions to standard Agile scale (1, 2, 3, 5, 8, 13) |
+
+## 🏗️ System Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                        SprintIQ Pipeline                     │
+├──────────┬──────────────┬────────────────┬──────────────────┤
+│  INPUT   │ PREPROCESSING│   ML ENGINE    │    OUTPUT         │
+│          │              │                │                   │
+│ User     │ Tokenization │ TF-IDF         │ Story Points      │
+│ Story    │ Stop-word    │ Vectorization  │ (Fibonacci)       │
+│ Text     │ Removal      │ Random Forest  │ Confidence Score  │
+│          │ Cleaning     │ Regression     │                   │
+└──────────┴──────────────┴────────────────┴──────────────────┘
+```
+
+<div align="center">
+
+![Workflow](docs/images/workflow_diagram.png)
+
+</div>
+
+## 🖥️ Screenshots
+
+<div align="center">
+
+| Estimator UI | How It Works |
+|---|---|
+| ![Estimator](docs/images/estimator_ui.png) | ![Steps](docs/images/how_it_works_steps.png) |
+
+| Features Overview | About & Mission |
+|---|---|
+| ![Features](docs/images/features_detail.png) | ![About](docs/images/about_mission.png) |
+
+</div>
+
+## 🛠️ Technology Stack
+
+| Layer | Technology |
+|---|---|
+| **Backend** | FastAPI (Python) |
+| **ML Model** | Scikit-Learn (Random Forest Regressor) |
+| **NLP** | TF-IDF Vectorization |
+| **Data Processing** | Pandas, NumPy |
+| **Frontend** | Jinja2 Templates, Tailwind CSS |
+| **Server** | Uvicorn (ASGI) |
+| **Deployment** | Render |
+
+## 🚀 Quick Start
 
 ### Prerequisites
+- Python 3.9+
+- pip
 
-*   Python 3.9 or higher
-*   pip
+### Installation
 
-### Setup
+```bash
+# Clone the repository
+git clone https://github.com/vivekperka7-spec/Agile-Story-Point-Estimation-using-Machine-Learning-.git
+cd Agile-Story-Point-Estimation-using-Machine-Learning-
 
-1.  **Install Dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
+# Install dependencies
+pip install -r requirements.txt
 
-2.  **Train Model**
-    ```bash
-    python scripts/train_model.py
-    ```
+# Train the model
+python scripts/train_model.py
 
-3.  **Start Application**
-    ```bash
-    uvicorn app.main:app --reload
-    ```
-    The application will be accessible at `http://127.0.0.1:8000`.
+# Start the application
+uvicorn main:app --reload
+```
 
-## Usage
+The application will be accessible at `http://127.0.0.1:8000`
 
-### Web Interface
-Navigate to the localized server URL, select the **Estimator** tab, and input a user story to receive a prediction.
+## 📡 API Reference
 
-### API Integration
-**Endpoint**: `POST /predict`
-**Content-Type**: `application/json`
+### Predict Story Points
 
-**Request**:
+```http
+POST /predict
+Content-Type: application/json
+```
+
+**Request Body:**
 ```json
 {
   "user_story": "As a user, I want to filter search results by price range so that I can find affordable items."
 }
 ```
 
-**Response**:
+**Response:**
 ```json
 {
   "predicted_story_points": 3,
@@ -84,11 +141,19 @@ Navigate to the localized server URL, select the **Estimator** tab, and input a 
 }
 ```
 
-## Credits and Copyright
+## 🔗 Live Demo
 
-**Lead Developer**: Vivek Perka
+🌐 **Try it live:** [https://sprintiq-intq.onrender.com](https://sprintiq-intq.onrender.com)
 
-> "SprintIQ demonstrates the power of Machine Learning in modern software engineering, aiming to resolve real-world Agile challenges like estimation bias through data-driven insights."
+> **Note:** The app is hosted on Render's free tier. It may take ~30 seconds to wake up on the first visit.
+
+## 👨‍💻 Author
+
+**Vivek Perka**
+
+> *"SprintIQ demonstrates the power of Machine Learning in modern software engineering, aiming to resolve real-world Agile challenges like estimation bias through data-driven insights."*
+
+## 📄 License
 
 **Copyright © 2026 Vivek Perka. All Rights Reserved.**
 
